@@ -1,11 +1,11 @@
-name: eslint-check
+name: make-lint
 
 on: push
 
 jobs:
   super-lint:
-    name: super-eslinter 
+    name: make-lint 
     runs-on: ubuntu-latest
     steps:
       - name: Run linter
-        run: npx eslint .
+        run: npx eslint . --fix
