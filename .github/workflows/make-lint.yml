@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run linter
-        run: 5+1
+        run: npx eslint .
