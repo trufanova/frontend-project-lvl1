@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import hello from './src/sli.js'
-console.log('Welcome to the Brain Games!')
-hello()
+import hello from './src/sli';
+
+console.log('Welcome to the Brain Games!');
+hello();
