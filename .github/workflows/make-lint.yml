@@ -1,13 +1,12 @@
-name: Make-Lint
+name: eslint-check
 
-# Run this workflow every time a new commit pushed to your repository
-on: 
-  push:
-    branches:
-      - '**'
+on: push
 
 jobs:
-  build:
+  super-lint:
+    name: super-eslinter 
     runs-on: ubuntu-latest
-    steps:
-      - run: make lint
+
+   steps:
+      - name: Run linter
+        run: make lint
