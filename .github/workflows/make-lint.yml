@@ -6,7 +6,6 @@ jobs:
   super-lint:
     name: super-eslinter 
     runs-on: ubuntu-latest
-
-   steps:
+    steps:
       - name: Run linter
         run: make lint
