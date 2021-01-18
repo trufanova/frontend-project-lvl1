@@ -1,9 +1,13 @@
 name: Make-Lint
 
 # Run this workflow every time a new commit pushed to your repository
-on: push
+on: 
+  push:
+    branches:
+      - '**'
 
 jobs:
-  make lint:
+  build:
+    runs-on: ubuntu-latest
     steps:
       - run: make lint
