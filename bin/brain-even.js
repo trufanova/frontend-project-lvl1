@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import hello, { name } from './src/sli';
+import hello from './src/sli.js';
 
 console.log('Welcome to the Brain Games!');
 hello();
@@ -30,7 +30,7 @@ const even = () => {
     }
   }
   if (counter === 3) {
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${hello()}`);
   }
 };
 even();
