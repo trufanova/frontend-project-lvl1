@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import hello from './src/sli.js';
+import hello, {nameUser} from './src/sli.js';
 
 console.log('Welcome to the Brain Games!');
 hello();
-
 const even = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
   let random = 0;
@@ -30,7 +29,7 @@ const even = () => {
     }
   }
   if (counter === 3) {
-    console.log(`Congratulations, ${hello()}`);
+    console.log(`Congratulations, ${nameUser}`);
   }
 };
 even();
