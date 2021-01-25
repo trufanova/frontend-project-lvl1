@@ -4,7 +4,7 @@ export const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1
 
 export const getCongratulations = (counter) => {
   if (counter === 3) {
-    console.log(`Congratulations, ${nameUser}`);
+    console.log(`Congratulations, ${nameUser}!`);
   }
 };
 
