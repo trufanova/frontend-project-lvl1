@@ -10,25 +10,29 @@ function even() {
   let random = 0;
   let counter = 0;
 
-  function question() {
+  const question = () => {
     random = getRandom(1, 100);
     console.log(`Question: ${random}`);
     const answer = readlineSync.question('Your answer: ');
 
     if (random % 2 === 0 && answer === 'yes') {
-      correctAnswerMessage();
       counter += 1;
-    } else if (random % 2 !== 0 && answer === 'no') {
-      console.log('Correct!');
+      return correctAnswerMessage();
+    }
+    if (random % 2 !== 0 && answer === 'no') {
       counter += 1;
-    } else if (random % 2 === 0 && answer !== 'yes') {
+      return correctAnswerMessage();
+    }
+    if (random % 2 === 0 && answer !== 'yes') {
       wrongAnswerMessage(answer, 'yes');
       return false;
-    } else if (random % 2 !== 0 && answer !== 'no') {
+    }
+    if (random % 2 !== 0 && answer !== 'no') {
       wrongAnswerMessage(answer, 'no');
       return false;
     }
-  }
+    return false;
+  };
 
   askThreeQuestions(question);
   getCongratulations(counter);
