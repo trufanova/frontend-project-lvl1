@@ -6,7 +6,7 @@ export const getCongratulations = (counter) => {
   if (counter === 3) {
     console.log(`Congratulations, ${getNameUser()}!`);
   } else {
-    console.log(`Let's try again, ${getNameUser}!`);
+    console.log(`Let's try again, ${getNameUser()}!`);
   }
 };
 
