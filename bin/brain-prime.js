@@ -36,6 +36,7 @@ const prime = () => {
       counter += 1;
     } else {
       wrongAnswerMessage(answer, correctAnswer);
+      return false;
     }
   };
 

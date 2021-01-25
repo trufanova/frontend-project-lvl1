@@ -31,6 +31,7 @@ const gcd = () => {
       counter += 1;
     } else {
       wrongAnswerMessage(answer, correctAnswer);
+      return false;
     }
   };
   askThreeQuestions(question);

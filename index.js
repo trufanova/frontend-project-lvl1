@@ -18,6 +18,8 @@ export const correctAnswerMessage = () => { console.log('Correct!'); };
 
 export const askThreeQuestions = (question) => {
   for (let i = 1; i < 4; i += 1) {
-    question();
+    if (question() === false) {
+      break;
+    }
   }
 };

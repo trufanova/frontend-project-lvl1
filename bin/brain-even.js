@@ -23,8 +23,10 @@ const even = () => {
       counter += 1;
     } else if (random % 2 === 0 && answer !== 'yes') {
       wrongAnswerMessage(answer, 'yes');
+      return false;
     } else if (random % 2 !== 0 && answer !== 'no') {
       wrongAnswerMessage(answer, 'no');
+      return false;
     }
   };
 
