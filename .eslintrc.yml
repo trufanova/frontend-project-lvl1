@@ -10,6 +10,7 @@ rules: {
    'no-console': 'off',
    'import/extensions': 'off',
    'no-await-in-loop': 'off',
-   'import/no-mutable-exports': 'off' 
+   'import/no-mutable-exports': 'off',
+   'consistent-return': 'off'  
 }
 
