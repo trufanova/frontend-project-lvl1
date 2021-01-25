@@ -47,6 +47,7 @@ const calc = () => {
       counter += 1;
     } else {
       wrongAnswerMessage(answer, correctAnswer);
+      return false;
     }
   };
 
