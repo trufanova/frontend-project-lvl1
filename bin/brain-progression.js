@@ -36,12 +36,11 @@ const progression = () => {
     console.log(`Question: ${getQuestionArray(progressionArray, elemX)}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(correctAnswer) === Number(answer)) {
-      correctAnswerMessage();
       counter += 1;
-    } else {
-      wrongAnswerMessage(answer, correctAnswer);
-      return false;
+      return correctAnswerMessage();
     }
+    wrongAnswerMessage(answer, correctAnswer);
+    return false;
   };
   askThreeQuestions(question);
   getCongratulations(counter);

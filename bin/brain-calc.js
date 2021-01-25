@@ -2,7 +2,7 @@
 import readlineSync from 'readline-sync';
 import hello from '../src/sli.js';
 import {
-  getRandom, getCongratulations, wrongAnswerMessage, correctAnswerMessage, askThreeQuestions
+  getRandom, getCongratulations, wrongAnswerMessage, correctAnswerMessage, askThreeQuestions,
 } from '../index.js';
 
 let random1 = 0;
@@ -26,9 +26,8 @@ const getCorrectAnswer = (num1, num2, sign) => {
   if (sign === '-') {
     return num1 - num2;
   }
-  if (sign === '*') {
-    return num1 * num2;
-  }
+
+  return num1 * num2;
 };
 
 const calc = () => {
@@ -43,12 +42,11 @@ const calc = () => {
     const answer = readlineSync.question('Your answer: ');
 
     if (Number(correctAnswer) === Number(answer)) {
-      correctAnswerMessage();
       counter += 1;
-    } else {
-      wrongAnswerMessage(answer, correctAnswer);
-      return false;
+      return correctAnswerMessage();
     }
+    wrongAnswerMessage(answer, correctAnswer);
+    return false;
   };
 
   askThreeQuestions(question);

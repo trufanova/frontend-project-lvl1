@@ -1,12 +1,12 @@
-import { nameUser } from './src/sli.js';
+import { getNameUser } from './src/sli.js';
 
 export const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const getCongratulations = (counter) => {
   if (counter === 3) {
-    console.log(`Congratulations, ${nameUser}!`);
+    console.log(`Congratulations, ${getNameUser()}!`);
   } else {
-    console.log(`Let's try again, ${nameUser}!`);
+    console.log(`Let's try again, ${getNameUser}!`);
   }
 };
 
