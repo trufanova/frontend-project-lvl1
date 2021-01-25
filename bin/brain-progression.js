@@ -21,7 +21,7 @@ const getArray = () => {
 const getQuestionArray = (arr, el) => {
   const tempArray = arr;
   tempArray[el] = '..';
-  return tempArray;
+  return tempArray.join(' ');
 };
 
 const progression = () => {
