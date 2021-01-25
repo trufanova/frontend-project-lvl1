@@ -5,12 +5,12 @@ import {
   getRandom, getCongratulations, wrongAnswerMessage, correctAnswerMessage, askThreeQuestions,
 } from '../index.js';
 
-const even = () => {
+function even() {
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
   let random = 0;
   let counter = 0;
 
-  const question = () => {
+  function question() {
     random = getRandom(1, 100);
     console.log(`Question: ${random}`);
     const answer = readlineSync.question('Your answer: ');
@@ -28,11 +28,11 @@ const even = () => {
       wrongAnswerMessage(answer, 'no');
       return false;
     }
-  };
+  }
 
   askThreeQuestions(question);
   getCongratulations(counter);
-};
+}
 
 hello();
 even();
