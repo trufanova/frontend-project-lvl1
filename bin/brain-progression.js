@@ -33,7 +33,7 @@ const progression = () => {
     const progressionArray = getArray();
     const elemX = getRandom(0, progressionArray.length - 1);
     const correctAnswer = progressionArray[elemX];
-    console.log(getQuestionArray(progressionArray, elemX));
+    console.log(`Question: ${getQuestionArray(progressionArray, elemX)}`);
     const answer = readlineSync.question('Your answer: ');
     if (Number(correctAnswer) === Number(answer)) {
       correctAnswerMessage();
